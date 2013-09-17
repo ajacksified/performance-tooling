@@ -103,7 +103,7 @@
         </section>
 
         <section>
-          <h2>Milestones</h2>
+          <h2>Page Load Milestones</h2>
 
           <ol>
             <li>First Byte (TTFB)
@@ -122,6 +122,10 @@
         </section>
 
         <section>
+          <h1>Backend Performance</h1>
+        </section>
+
+        <section>
           <header><h2>Backend Performance</h2></header>
           <p>
             Optimize the time to first byte. Get your page to the user faster.
@@ -136,7 +140,7 @@
         <section>
           <header><h3>Backend Performance ></h3> <h2>Optimize Your Server</h2></header>
           <h2>NewRelic Performance Monitoring</h2>
-          <p>NewRelic helps you identify slow pages and how to fix them.</p>
+          <p>NewRelic helps you identify slow pages and figure out why they're slow.</p>
         </section>
 
         <section>
@@ -160,21 +164,31 @@
           <p>
             What if the user skipped hitting your server entirely?
           </p>
+
+          <p>
+            "Caching" is storing pages and content that doesn't change often on
+            a level above the web server.
+          </p>
         </section>
 
         <section>
           <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
           <p>
-            Most web frameworks include caching for pages that don't change
-            often.
+            Most web frameworks include caching for pages and content like
+            scripts, styles, and images.
           </p>
          </section>
  
         <section>
           <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
           <p>
-            We rely heavily on Akamai for caching content for us, so users
-            load pages from Akamai instead of hitting us.
+            We rely heavily on Akamai for caching content, so users load pages
+            from Akamai instead of hitting us.
+          </p>
+
+          <p>
+            This lets our servers deal with less requests and helps us under
+            heavy load.
           </p>
         </section>
  
@@ -186,24 +200,16 @@
         </section>
 
         <section>
-          <h2>Milestones</h2>
-
-          <ol>
-            <li><strike>First Byte (TTFB)</strike>
-            <li>Render
-            <li>Load Time
-            <li>Finished
-          </ol>
+          <h1>Frontend Performance</h1>
         </section>
 
         <section>
           <header><h2>Frontend Performance</h2></header>
           <p>
-            Optimize loading the rest of the pages (images, styles, scripts)
-            so the user can start using the page sooner.
+            Optimize loading the page content so the user can start using the
+            page sooner.
           </p>
         </section>
-
 
         <section>
           <header><h2>Frontend Performance</h2></header>
@@ -299,6 +305,143 @@
             <li>Pages that don't refresh often
           </ul>
         </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+          <h2>Measuring Your Frontend Performance</h2>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>Google Analytics</h2>
+          <p>Compare against other sites</p>
+          <p>image of google analytics</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>RUM Metrics</h2>
+          <p>Compare our key metrics against historical data</p>
+          <p>Allows us to watch the impact of changes we make</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>New Relic's RUM</h2>
+          <p>image of NR RUM</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>
+            Using our own RUM and storing it in Hive allows us to query by
+            country, page, and store data about a/b tests to compare the same
+            page with different content or improvements..
+          </p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>image of RUM Metrics by global median</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>image of RUM Metrics by top pages</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>New Relic's Apdex</h2>
+          <p>
+            Apdex tells us how many people are "satisfied" with the load time
+            of a site. Super useful to watch for regressions and problems.
+          </p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>Your Browser's Network Tab</h2>
+          <p>Watch for slow requests and large files.</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>Image of network tab</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>PageSpeed</h2>
+          <p>Automated recommendations based on common performance problems.</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>Image of pagespeed</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <h2>WebPageTest</h2>
+          <p>
+            Side-by-side comparisons of load times from servers all over
+            the world.
+          </p>
+          <p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>Image of webpagetest result page</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>Image of webpagetest result request page</p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <p>Image of webpagetest comparison videos</p>
+        </section>
+
+        <section>
+          <h1>Tying It All Together</h1>
+        </section>
+
+        <section>
+          <p><strong>With:</strong></p>
+
+          <ul>
+            <li>NewRelic to tell us how to optimize our backend
+            <li>RUM and WebPageTest to tell us what part of a request is slow (TTFB, rendering, load time)
+            <li>NewRelic and Google Analytics to tell us what pages are hit most
+            <li>WebPageTest, browser tests, and PageSpeed to give us insight into requests
+            <li>WebPageTest to run A/B tests on changes and test in different countries
+            <li>RUM to watch what impact our changes are having
+          </ul>
+        </section>
+
+        <section>
+          <p>
+            We can decrease our page load time and focus our efforts on the
+            pages that users spend the most time waiting on, and decrease
+            bounce rate and increase happiness.
+          </p>
+        </section>
+
+        <section>
+          <header><h2>Overview</h2></header>
+          <ul>
+            <li>Performance increases happiness
+            <li>Most of your fixes will come from frontend
+            <li>Tracking impact is important
+          </ul>
+
+          <p>Any questions?</p>
+        </section>
+
       </div>
     </div>
 
@@ -330,3 +473,4 @@
     </script>
   </body>
 </html>
+
