@@ -1,0 +1,332 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Performance Tooling</title>
+
+    <meta name="description" content="A presentation about making and tracking performance improvements.">
+    <meta name="author" content="Jack Lawson <ajacksified@gmail.com>">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="lib/css/rainbow.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/theme/airbnb.css" id="theme">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-state='emphasis emphasis-primary'>
+          <h1>Performance is important.</h1>
+        </section>
+
+        <section>
+          <p>Stuff about bounce rate</p>
+        </section>
+
+        <section>
+          <p>More stuff about user happiness</p>
+        </section>
+
+        <section data-state='emphasis emphasis-primary'>
+          <h1>Developer time is important.</h1>
+        </section>
+
+        <section>
+          <p>Stuff about metrics</p>
+        </section>
+
+        <section>
+          <p>
+            Our goal should, then, be to make the site as fast as possible for
+            the most users, as efficiently as possible.
+          </p>
+          <p>
+            Making informed changes and measuring impact is an essential part of
+            reaching this goal.
+          </p>
+        </section>
+
+        <section data-state='emphasis emphasis-primary'>
+          <h1>
+            Performance Tooling
+          </h1>
+
+          <h1 style="text-align: right;"><i class="icon-rocket"></i></h1>
+        </section>
+
+        <section data-state='emphasis emphasis-secondary'>
+          <h2>Jack Lawson</h2>
+          <h4>Software Engineer, Airbnb</h4>
+
+          <h3>
+            @ajacksified
+            <i class="icon-github"></i>
+            <i class="icon-twitter"></i>
+          </h3>
+        </section>
+
+        <section>
+          <p>
+            To understand how to make a web request faster, one must first
+            dissect the parts of a web request.
+          </p>
+        </section>
+
+        <section>
+          <p>Image of web request, fading in steps</p>
+        </section>
+
+        <section>
+          <p>Annotate backend performance</p>
+        </section>
+
+        <section>
+          <p>Annotate frontend performance</p>
+        </section>
+
+        <section>
+          <h2>Milestones</h2>
+
+          <ol>
+            <li>First Byte (TTFB)
+            <li>Render
+            <li>Load Time
+            <li>Finished
+          </ol>
+        </section>
+
+        <section>
+          <p>above image with milestone annotations</p>
+        </section>
+
+        <section data-state='background the-battle'>
+          <img src='img/the_battle.jpg' />
+        </section>
+
+        <section>
+          <header><h2>Backend Performance</h2></header>
+          <p>
+            Optimize the time to first byte. Get your page to the user faster.
+          </p>
+
+          <p>
+            This is the time it takes for a web request to reach your server,
+            get processed, and return a page.
+          </p>
+        </section>
+
+        <section>
+          <header><h3>Backend Performance ></h3> <h2>Optimize Your Server</h2></header>
+          <h2>NewRelic Performance Monitoring</h2>
+          <p>NewRelic helps you identify slow pages and how to fix them.</p>
+        </section>
+
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
+          <p>image of newrelic dashboard</p>
+        </section>
+
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
+          <p>image of newrelic transactions</p>
+        </section>
+
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
+          <p>image of newrelic transaction breakdown</p>
+        </section>
+
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
+          <h2>Caching</h2>
+          <p>
+            What if the user skipped hitting your server entirely?
+          </p>
+        </section>
+
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
+          <p>
+            Most web frameworks include caching for pages that don't change
+            often.
+          </p>
+         </section>
+ 
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
+          <p>
+            We rely heavily on Akamai for caching content for us, so users
+            load pages from Akamai instead of hitting us.
+          </p>
+        </section>
+ 
+        <section>
+          <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
+          <p>
+            Image of Luna metrics
+          </p>
+        </section>
+
+        <section>
+          <h2>Milestones</h2>
+
+          <ol>
+            <li><strike>First Byte (TTFB)</strike>
+            <li>Render
+            <li>Load Time
+            <li>Finished
+          </ol>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+          <p>
+            Optimize loading the rest of the pages (images, styles, scripts)
+            so the user can start using the page sooner.
+          </p>
+        </section>
+
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+          <h1>Performance Golden Rule</h1>
+          <h2>Make Less Requests for Smaller Content</h2>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+          <ul>
+            <li>Global styles, not per-page styles
+            <li>Lazy-load images
+            <li>Lazy-load javascript
+            <li>Concatenate css, javacsript
+            <li>Load using sharded, cookieless domains
+            <li>SPDY
+          </ul>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+
+          <h3>In the Cloud</h3>
+
+          <span class='fragment'>High latency,</span>
+          <span class='fragment'>packet loss,</span>
+          <span class='fragment'>slow browsers,</span>
+          <span class='fragment'>deep packet inspection,</span>
+          <span class='fragment'>old computers,</span>
+          <span class='fragment'>unreliable mobile networks</span>
+          <span class='fragment'> </span>
+        </section>
+
+        <section data-state='background cables'>
+          <h2>The Speed of Light</h2>
+          <h4>299,792,458 m / s</h4>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+
+          <h2>From EC2 in Virginia</h2>
+          <ul>
+            <li>15ms to San Francisco
+            <li>37ms to Beijing
+          </ul>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+
+          <h2>I Don't Have a Direct Cable From My Server In Virginia to My Computer</h2>
+        </section>
+
+        <section>
+          <img src='img/network-diagram.png' />
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+
+          <h2>distance * speed of light gives us two things to change</h2>
+          <p>Lower the distance</p>
+          <p>Increase the speed of light</p>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+
+          <h1>Wormholes</h1>
+          <h3>Are Prohibitively Expensive</h3>
+        </section>
+
+        <section>
+          <header><h2>Frontend Performance</h2></header>
+
+          <h2>Move The Content Closer</h2>
+          <h3>Edge Caching via Akamai</h3>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance ></h3> <h2>Edge Caching</h2></header>
+
+          <p>
+            Local servers keep content cached, so users can load
+            from <em>somewhere close</em> instead of across the world.
+          </p>
+
+          <ul>
+            <li>Images
+            <li>CSS
+            <li>Javascript
+            <li>Pages that don't refresh often
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="lib/js/rainbow.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: 'airbnb', // available themes are in /css/theme
+        transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
