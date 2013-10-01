@@ -38,11 +38,14 @@
         </section>
 
         <section>
-          <p>Stuff about bounce rate</p>
-        </section>
+          <ul>
+            <li>Half of all consumers expect a web page to load &lt; 2s
+            <li>40% of people abandon a sites that take &gt; 3s
+            <li>A 1 second delay in page response can result in a 7% reduction in conversions.
+            <li>Loading time effects SEO rankings
+          </ul>
 
-        <section>
-          <p>More stuff about user happiness</p>
+          <p><i>(Gomez, Akamai)</i></p>
         </section>
 
         <section data-state='emphasis emphasis-primary'>
@@ -50,7 +53,9 @@
         </section>
 
         <section>
-          <p>Stuff about metrics</p>
+          <p>
+            Proper metrics help you spend time wisely on product goals.
+          </p>
         </section>
 
         <section>
@@ -91,15 +96,49 @@
         </section>
 
         <section>
-          <p>Image of web request, fading in steps</p>
+          <ol>
+            <li class="fragment">User enters url in browser
+            <li class="fragment">DNS fetch
+            <li class="fragment">Hit CDN server from DNS
+            <li class="fragment">Request from origin app server
+            <li class="fragment">App server requests data from database / services
+            <li class="fragment">Browser starts receiving html
+            <li class="fragment">Load styles, images, js from CDN
+            <li class="fragment">Finished loading assets
+            <li class="fragment">Finished running post-load scripts
+          </ol>
         </section>
 
         <section>
-          <p>Annotate backend performance</p>
+          <h2>Backend performance</h2>
+
+          <ol>
+            <li class="">User enters url in browser
+            <li class="">DNS fetch
+            <li class="">Hit CDN server from DNS
+            <li class="">Request from origin app server
+            <li class="">App server requests data from database / services
+            <li class="fade">Browser starts receiving html
+            <li class="fade">Load styles, images, js from CDN
+            <li class="fade">Finished loading assets
+            <li class="fade">Finished running post-load scripts
+          </ol>
         </section>
 
         <section>
-          <p>Annotate frontend performance</p>
+          <h2>Frontend performance</h2>
+
+          <ol>
+            <li class="fade">User enters url in browser
+            <li class="fade">DNS fetch
+            <li class="fade">Hit CDN server from DNS
+            <li class="fade">Request from origin app server
+            <li class="fade">App server requests data from database / services
+            <li class="">Browser starts receiving html
+            <li class="">Load styles, images, js from CDN
+            <li class="">Finished loading assets
+            <li>Finished running post-load scripts
+          </ol>
         </section>
 
         <section>
@@ -114,7 +153,19 @@
         </section>
 
         <section>
-          <p>above image with milestone annotations</p>
+          <h2>Page Load Milestones</h2>
+
+          <ol>
+            <li>User enters url in browser
+            <li>DNS fetch
+            <li>Hit CDN server from DNS
+            <li>Request from origin app server
+            <li>App server requests data from database / services
+            <li><strong>(TTFB)</strong> Browser starts receiving html
+            <li><strong>(Render)</strong> Load styles, images, js from CDN
+            <li><strong>(Load Time)</strong> Finished loading assets
+            <li><strong>(Finished)</strong> Finished running post-load scripts
+          </ol>
         </section>
 
         <section data-state='background the-battle'>
@@ -128,38 +179,33 @@
         <section>
           <header><h2>Backend Performance</h2></header>
           <p>
-            Optimize the time to first byte. Get your page to the user faster.
-          </p>
-
-          <p>
-            This is the time it takes for a web request to reach your server,
-            get processed, and return a page.
+            Optimize TTFB and get your page to the user faster.
           </p>
         </section>
 
         <section>
-          <header><h3>Backend Performance ></h3> <h2>Optimize Your Server</h2></header>
+          <header><h3>Backend Performance &gt;</h3> <h2>Optimize Your Server</h2></header>
           <h2>NewRelic Performance Monitoring</h2>
           <p>NewRelic helps you identify slow pages and figure out why they're slow.</p>
         </section>
 
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
-          <p>image of newrelic dashboard</p>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
+          <img src="./img/newrelic.png" />
         </section>
 
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
-          <p>image of newrelic transactions</p>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
+          <img src="./img/newrelic-rooms.png" />
         </section>
 
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
-          <p>image of newrelic transaction breakdown</p>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
+          <img src="./img/newrelic-rooms-transaction.png" />
         </section>
 
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Server</h2></header>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
           <h2>Caching</h2>
           <p>
             What if the user skipped hitting your server entirely?
@@ -172,7 +218,7 @@
         </section>
 
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Network</h2></header>
           <p>
             Most web frameworks include caching for pages and content like
             scripts, styles, and images.
@@ -180,7 +226,7 @@
          </section>
  
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Network</h2></header>
           <p>
             We rely heavily on Akamai for caching content, so users load pages
             from Akamai instead of hitting us.
@@ -193,10 +239,8 @@
         </section>
  
         <section>
-          <header><h3>Backend Performance</h3> > <h2>Optimize Your Network</h2></header>
-          <p>
-            Image of Luna metrics
-          </p>
+          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Network</h2></header>
+          <img src="./img/offload.png" />
         </section>
 
         <section>
@@ -291,7 +335,7 @@
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Edge Caching</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Edge Caching</h2></header>
 
           <p>
             Local servers keep content cached, so users can load
@@ -312,27 +356,27 @@
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>Google Analytics</h2>
           <p>Compare against other sites</p>
           <p>image of google analytics</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>RUM Metrics</h2>
           <p>Compare our key metrics against historical data</p>
           <p>Allows us to watch the impact of changes we make</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>New Relic's RUM</h2>
           <p>image of NR RUM</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>
             Using our own RUM and storing it in Hive allows us to query by
             country, page, and store data about a/b tests to compare the same
@@ -341,17 +385,25 @@
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
+          <p>
+            We particularly care about page median load time and pages that take
+            over 3 seconds and 5 seconds, respectively ("slow" load times.)
+          </p>
+        </section>
+
+        <section>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>image of RUM Metrics by global median</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>image of RUM Metrics by top pages</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>New Relic's Apdex</h2>
           <p>
             Apdex tells us how many people are "satisfied" with the load time
@@ -360,29 +412,29 @@
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>Your Browser's Network Tab</h2>
           <p>Watch for slow requests and large files.</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>Image of network tab</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>PageSpeed</h2>
           <p>Automated recommendations based on common performance problems.</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>Image of pagespeed</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>WebPageTest</h2>
           <p>
             Side-by-side comparisons of load times from servers all over
@@ -392,17 +444,17 @@
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>Image of webpagetest result page</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>Image of webpagetest result request page</p>
         </section>
 
         <section>
-          <header><h3>Frontend Performance ></h3> <h2>Tooling</h2></header>
+          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <p>Image of webpagetest comparison videos</p>
         </section>
 

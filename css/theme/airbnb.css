@@ -212,3 +212,11 @@ body {
 .emphasis-secondary .reveal .state-background {
   background: rgba(226, 36, 144, 1.0);
 }
+
+.fade {
+  opacity: .2;
+}
+
+strong {
+  color: rgba(226, 36, 144, 1.0);
+}
