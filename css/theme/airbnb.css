@@ -50,8 +50,8 @@ body {
 }
 
 .reveal dt {
-  font-weight: bold;
-  font-family: "Shift", serif;
+  font-weight: normal;
+  font-family: "shiftbold", serif;
 }
 
 .reveal dd {
@@ -81,15 +81,12 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: black;
-  font-family: "shift", serif;
+  font-family: "shiftbold", serif;
+  font-weight: normal;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: none;
   text-shadow: none; }
-
-.reveal h1, .reveal h2 {
-  font-weight: bold;
-}
 
 /*********************************************
  * LINKS
