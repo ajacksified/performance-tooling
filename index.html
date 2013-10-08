@@ -421,22 +421,20 @@
 
         <section>
           <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <h2>Google Analytics</h2>
-          <p>Compare against other sites</p>
-          <p>image of google analytics</p>
-        </section>
+          <h2>RUM (Real User Metrics)</h2>
 
-        <section>
-          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <h2>RUM Metrics</h2>
-          <p>Compare our key metrics against historical data</p>
-          <p>Allows us to watch the impact of changes we make</p>
-        </section>
+          <figure>
+            <img src="img/global-page-load.png" />
 
-        <section>
-          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <h2>New Relic's RUM</h2>
-          <p>image of NR RUM</p>
+            <figcaption>
+              Global 50th percentile load time, Airbnb.com, 3/1/13 - 5/30/13
+            </figcaption>
+          </figure>
+
+          <aside class="notes">
+            <p>Compare our performance metrics against historical data</p>
+            <p>Allows us to watch the impact of changes we make</p>
+          </aside>
         </section>
 
         <section>
@@ -569,6 +567,7 @@
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        history: true,
         theme: 'airbnb', // available themes are in /css/theme
         transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
 
