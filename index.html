@@ -424,53 +424,78 @@
           <h2>RUM (Real User Metrics)</h2>
 
           <figure>
-            <img src="img/global-page-load.png" />
+            <img src="img/rum-global-50th.png" />
 
             <figcaption>
-              Global 50th percentile load time, Airbnb.com, 3/1/13 - 5/30/13
+              Global 50th percentile load time, Airbnb.com
             </figcaption>
           </figure>
 
           <aside class="notes">
             <p>Compare our performance metrics against historical data</p>
             <p>Allows us to watch the impact of changes we make</p>
+
+            <p>
+              Using our own RUM and storing it in Hive allows us to query by
+              country, page, and store data about a/b tests to compare the same
+              page with different content or improvements.
+            </p>
+
+            <p>
+              We particularly care about page median load time and pages that take
+              over 3 seconds and 5 seconds, respectively ("slow" load times.)
+            </p>
           </aside>
         </section>
 
         <section>
-          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <p>
-            Using our own RUM and storing it in Hive allows us to query by
-            country, page, and store data about a/b tests to compare the same
-            page with different content or improvements..
-          </p>
+          <header><h3>Frontend Performance &gt;</h3> <h3>Tooling &gt;</h3> <h2>Rum</h2></header>
+ 
+          <figure>
+            <img src="img/rum-pages.png" />
+
+            <figcaption>
+              50th percentile load time by page, Airbnb.com
+            </figcaption>
+          </figure>
         </section>
 
         <section>
-          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <p>
-            We particularly care about page median load time and pages that take
-            over 3 seconds and 5 seconds, respectively ("slow" load times.)
-          </p>
+          <header><h3>Frontend Performance &gt;</h3> <h3>Tooling &gt;</h3> <h2>Rum</h2></header>
+ 
+          <figure>
+            <img src="img/rum-regions.png" />
+
+            <figcaption>
+              50th percentile load time by region, Airbnb.com
+            </figcaption>
+          </figure>
         </section>
 
         <section>
-          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <p>image of RUM Metrics by global median</p>
-        </section>
+          <header><h3>Frontend Performance &gt;</h3> <h3>Tooling &gt;</h3> <h2>Rum</h2></header>
+ 
+          <figure>
+            <img src="img/rum-experiment.png" />
 
-        <section>
-          <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
-          <p>image of RUM Metrics by top pages</p>
+            <figcaption>
+              50th percentile load time by experiment, Airbnb.com
+            </figcaption>
+          </figure>
         </section>
 
         <section>
           <header><h3>Frontend Performance &gt;</h3> <h2>Tooling</h2></header>
           <h2>New Relic's Apdex</h2>
-          <p>
+
+          <p>image of apdex</p>
+
+          <aside class="notes">
             Apdex tells us how many people are "satisfied" with the load time
-            of a site. Super useful to watch for regressions and problems.
-          </p>
+            of a site. Super useful to watch for regressions and problems. It's
+            similar to the "% of page loads over 3 and 5s" numbers we use with
+            RUM.
+          </aside>
         </section>
 
         <section>
