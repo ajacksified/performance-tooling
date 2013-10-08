@@ -35,38 +35,27 @@
       <div class="slides">
         <section data-state='emphasis emphasis-primary'>
           <h1>Performance is important.</h1>
-        </section>
 
-        <section>
-          <ul>
-            <li>Half of all consumers expect a web page to load &lt; 2s
-            <li>40% of people abandon a sites that take &gt; 3s
-            <li>A 1 second delay in page response can result in a 7% reduction in conversions.
-            <li>Loading time effects SEO rankings
-          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Half of all consumers expect a web page to load &lt; 2s
+              <li>40% of people abandon a sites that take &gt; 3s
+              <li>A 1 second delay in page response can result in a 7% reduction in conversions.
+              <li>Loading time effects SEO rankings
+            </ul>
 
-          <p><i>(Gomez, Akamai)</i></p>
+            <p><i>(Gomez, Akamai)</i></p>
+          </aside>
         </section>
 
         <section data-state='emphasis emphasis-primary'>
           <h1>Developer time is important.</h1>
-        </section>
 
-        <section>
-          <p>
-            Proper metrics help you spend time wisely on product goals.
-          </p>
-        </section>
-
-        <section>
-          <p>
-            Our goal should, then, be to make the site as fast as possible for
-            the most users, as efficiently as possible.
-          </p>
-          <p>
-            Making informed changes and measuring impact is an essential part of
-            reaching this goal.
-          </p>
+          <aside class="notes">
+            <p>
+              Proper metrics help you spend time wisely on product goals.
+            </p>
+          </aside>
         </section>
 
         <section data-state='emphasis emphasis-primary'>
@@ -75,6 +64,18 @@
           </h1>
 
           <h1 style="text-align: right;"><i class="icon-rocket"></i></h1>
+
+          <aside class="notes">
+            <p>
+              Our goal should, then, be to make the site as fast as possible for
+              the most users, as efficiently as possible.
+            </p>
+
+            <p>
+              Making informed changes and measuring impact is an essential part of
+              reaching this goal.
+            </p>
+          </aside>
         </section>
 
         <section data-state='emphasis emphasis-secondary'>
@@ -86,16 +87,31 @@
             <i class="icon-github"></i>
             <i class="icon-twitter"></i>
           </h3>
+
+          <aside class="notes">
+            <ul>
+              <li>Jack Lawson</li>
+              <li>Full-stack, interested in making usable software</li>
+              <li>Usable = easy to use, pleasant, for those who use software, and engineers who build software</li>
+              <li>
+                Lead me to Airbnb about a year and a half ago, believe in the mission of helping share world travel
+                experiences and creating microentrepeneurs
+              </li>
+              <li>
+                First 6 months I spent learning the ins and outs, cleaning up 
+                flows to make the site easier to use for guests and hosts
+              </li>
+              <li>
+                Since Jan. on performance, working with a wide array of tools
+                to make the site easier, less frustrating for hosts and guests
+              </li>
+            </ul>
+          </aside>
         </section>
 
         <section>
-          <p>
-            To understand how to make a web request faster, one must first
-            dissect the parts of a web request.
-          </p>
-        </section>
+          <h3>The Web Request</h3>
 
-        <section>
           <ol>
             <li class="fragment">User enters url in browser
             <li class="fragment">DNS fetch
@@ -107,6 +123,14 @@
             <li class="fragment">Finished loading assets
             <li class="fragment">Finished running post-load scripts
           </ol>
+
+          <aside class="notes">
+            <p>
+              To understand how to make a website faster, one must first
+              understand the parts of a web request. This helps us determine
+              where to apply tools and engineering effort most appropriately.
+            </p>
+          </aside>
         </section>
 
         <section>
@@ -123,6 +147,17 @@
             <li class="fade">Finished loading assets
             <li class="fade">Finished running post-load scripts
           </ol>
+
+          <aside class="notes">
+            <p>
+              The backend is all the time before a user first begins to see
+              content. This is everything from the server lookup to the server
+              processing time. Making this faster helps increase perceived
+              performance dramatically, because the user can see things happening.
+              If you've ever typed in an address and waited on a blank screen for
+              what felt like eternity, this is what you're waiting on.
+            </p>
+          </aside>
         </section>
 
         <section>
@@ -139,17 +174,14 @@
             <li class="">Finished loading assets
             <li>Finished running post-load scripts
           </ol>
-        </section>
 
-        <section>
-          <h2>Page Load Milestones</h2>
-
-          <ol>
-            <li>First Byte (TTFB)
-            <li>Render
-            <li>Load Time
-            <li>Finished
-          </ol>
+          <aside class="notes">
+            <p>
+              The frontend is the time a site takes to load things - images,
+              styles, and the content that makes the site usable. This must be
+              complete before a user can start interacting with a page.
+            </p>
+          </aside>
         </section>
 
         <section>
@@ -173,71 +205,102 @@
         </section>
 
         <section>
-          <h1>Backend Performance</h1>
-        </section>
-
-        <section>
           <header><h2>Backend Performance</h2></header>
-          <p>
+
+          <ol>
+            <li>User enters url in browser
+            <li>DNS fetch
+            <li>Hit CDN server from DNS
+            <li>Request from origin app server
+            <li>App server requests data from database / services
+            <li><strong>(TTFB)</strong> Browser starts receiving html
+          </ol>
+
+          <aside class="notes">
             Optimize TTFB and get your page to the user faster.
-          </p>
+          </aside>
         </section>
 
         <section>
           <header><h3>Backend Performance &gt;</h3> <h2>Optimize Your Server</h2></header>
           <h2>NewRelic Performance Monitoring</h2>
           <p>NewRelic helps you identify slow pages and figure out why they're slow.</p>
+
+          <aside class="notes">
+            NewRelic is a tool we use on our servers to help identify
+            slow sections of code and monitor for errors. It has a dashboard
+            where we watch for performance improvements (or degredations) after
+            code deploys. You can also dive into specific pages and watch how
+            performance changes over time, or relative to historical data.
+            I'll walk you through some of the graphs we use at Airbnb.
+          </aside>
         </section>
 
         <section>
           <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
           <img src="./img/newrelic.png" />
+
+          <aside class="notes">
+            This is an example of some of the dashboard graphs I monitor in
+            particular. Here, you can see vertical lines for code depoys, and
+            corresponding browser response and application response times. The
+            Browser response times correspond to our milestones, while the
+            application resopnse time is the time spent processing the page before
+            sending to the user, and most impacts TTFB.
+          </aside>
         </section>
 
         <section>
           <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
           <img src="./img/newrelic-rooms.png" />
+
+          <aside class="notes">
+            This shows a closer look at historical data for a specific page; in
+            this case, our "view listings" page. This is particularly helpful to
+            monitor for post-deploy changes.
+          </aside>
         </section>
 
         <section>
           <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
           <img src="./img/newrelic-rooms-transaction.png" />
+
+          <aside class="notes">
+            Newrelic also provides a way to dive deeper into individual requests,
+            which is helpful to find out why particularly slow requests are slow.
+            We can then use this data to apply fixes to slow database calls or
+            slow code paths to fix performance for our high-percentile users.
+          </aside>
         </section>
 
         <section>
           <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Server</h2></header>
           <h2>Caching</h2>
-          <p>
-            What if the user skipped hitting your server entirely?
-          </p>
 
           <p>
-            "Caching" is storing pages and content that doesn't change often on
-            a level above the web server.
+            Skip hitting your server entirely.
           </p>
+
+          <aside class="notes">
+            <p>
+              "Caching" is storing pages and content that doesn't change often on
+              a level above the web server.
+            </p>
+
+            <p>
+              We rely heavily on Akamai for caching content, so users load pages
+              from Akamai instead of hitting us.  This lets our servers deal with
+              less requests and helps us under heavy load, such as after a press
+              release. It also lets us save on servers - we need less servers
+              because they have to handle less requests. This is particularly
+              helpful for us on both commonly-hit pages, like the ohmepage, and
+              pages that may process slowly because of the amount of data, such
+              as the "view listings" page.
+            </p>
+          </aside>
         </section>
 
-        <section>
-          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Network</h2></header>
-          <p>
-            Most web frameworks include caching for pages and content like
-            scripts, styles, and images.
-          </p>
-         </section>
- 
-        <section>
-          <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Network</h2></header>
-          <p>
-            We rely heavily on Akamai for caching content, so users load pages
-            from Akamai instead of hitting us.
-          </p>
 
-          <p>
-            This lets our servers deal with less requests and helps us under
-            heavy load.
-          </p>
-        </section>
- 
         <section>
           <header><h3>Backend Performance</h3> &gt; <h2>Optimize Your Network</h2></header>
           <img src="./img/offload.png" />
